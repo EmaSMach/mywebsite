@@ -1,13 +1,34 @@
-<!DOCTYPE html>
+{% load static %}
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Bootstrap CSS -->
+    {% block css %}
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    {% endblock %}
+    {% block extracss %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    {% block navbar %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+
+    {% block js %}
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    {% endblock %}
+
+    {% block extrajs %}
+    {% endblock %}
+  </body>
+</html>
