@@ -1,0 +1,12 @@
+# requirements.in
+django                  # the python web framework
+# static files
+whitenoise              # package to manage static files
+# database
+psycopg2-binary         # postgresql connector
+dj-database-url         # package to configure the database connection
+# server
+gunicorn                # http python server
+# bootstrap integration
+django-crispy-forms     # package to use bootstrap (and other css frameworks) with django forms
+crispy-bootstrap5       # crispy-form plugin for bootstrap version 5
