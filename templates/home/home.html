@@ -1,3 +1,21 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block title %}Welcome to my website{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center my-5">{% trans 'Bienvenido a mi sitio web' %}</h1>
+    <main>
+        <h2>{% trans 'Desarrollador Python' %}</h2>
+        <p>{% trans 'Soy un desarrollador python que siempre trata de seguir aprendiendo y ayudano a otros' %}.</p>
+        <p>{% trans 'Espero que te sientas a gusto en el sitio' %}.</p>
+    </main>
+    <div>
+        {% if posts %}
+            <h2>{% trans 'Últimas entradas del blog' %}</h2>
+            {% for post in posts %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
