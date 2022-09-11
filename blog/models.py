@@ -9,6 +9,9 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = 'categories'
+
 
 class Post(models.Model):
     DRAFT = 'DRAFT'
